@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mampu Beli iPhone 18 Pro?</title>
+<style>
+:root{--bg:#f2f2f7;--card:#fff;--text:#000;--mut:#8e8e93;--acc:#007aff;--sep:rgba(60,60,67,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--card:#1c1c1e;--text:#fff;--mut:#8e8e93;--acc:#0a84ff;--sep:rgba(84,84,88,.6)}}
+:root[data-theme="dark"]{--bg:#000;--card:#1c1c1e;--text:#fff;--mut:#8e8e93;--acc:#0a84ff;--sep:rgba(84,84,88,.6)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;display:flex;justify-content:center;padding:32px 16px 40px;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:440px}
+h1{font-size:2.1rem;font-weight:700;letter-spacing:-.03em;margin:8px 4px 2px}
+.sub{color:var(--mut);margin:0 4px 24px;font-size:1rem}
+.group{background:var(--card);border-radius:12px;overflow:hidden}
+.row{display:flex;align-items:center;justify-content:space-between;padding:0 16px;min-height:48px;gap:12px}
+.row+.row{box-shadow:inset 0 .5px 0 var(--sep);margin-top:0}
+.row label{font-size:1.02rem;white-space:nowrap}
+.row .in{display:flex;align-items:center;flex:1;justify-content:flex-end;color:var(--mut)}
+.row .in span{margin-right:6px;font-size:1.02rem}
+input{border:0;outline:0;background:transparent;color:var(--acc);font-size:1.02rem;text-align:right;width:100%;max-width:170px;padding:13px 0;font-family:inherit;font-variant-numeric:tabular-nums}
+input::placeholder{color:var(--mut);opacity:.6}
+.seg{display:flex;background:rgba(118,118,128,.16);border-radius:10px;padding:2px;margin-bottom:16px}
+.seg button{flex:1;width:auto;background:transparent;color:var(--text);border-radius:8px;padding:8px 0;font-size:.9rem;font-weight:500}
+.seg button.on{background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.18);font-weight:600}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg button.on{background:#636366}}
+:root[data-theme="dark"] .seg button.on{background:#636366}
+.cap{color:var(--mut);font-size:.8rem;margin:8px 16px 22px}
+button{width:100%;border:0;border-radius:14px;background:var(--acc);color:#fff;font-size:1.06rem;font-weight:600;padding:15px;cursor:pointer;font-family:inherit;transition:opacity .15s,transform .1s}
+button:active{opacity:.75;transform:scale(.985)}
+#res{display:none;margin-top:22px;background:var(--card);border-radius:20px;padding:28px 22px;text-align:center;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#emoji{font-size:3rem;line-height:1}
+#msg{font-size:1.15rem;font-weight:600;line-height:1.4;letter-spacing:-.01em;margin:14px 0 12px}
+#stat{font-size:.85rem;color:var(--mut);padding-top:12px;box-shadow:inset 0 .5px 0 var(--sep)}
+#buyBtn{margin-top:18px}
+#stores{margin-top:12px;background:var(--bg);text-align:left}
+#stores a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;color:var(--acc);text-decoration:none;font-size:1.02rem}
+#stores a+a{box-shadow:inset 0 .5px 0 var(--sep)}
+#stores a:active{opacity:.6}
+#stores a::after{content:"\203A";color:var(--mut);font-size:1.3rem}
+.foot{color:var(--mut);font-size:.75rem;text-align:center;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Seberapa kaya diri lu buat beli iPhone 18 Pro?</h1>
+<p class="sub">Mari berkhayal, siapa tau beneran punya iPhone 18 Pro</p>
+<div class="seg" id="seg"><button data-p="27499000" class="on">256 GB</button><button data-p="32999000">512 GB</button><button data-p="42999000">1 TB</button><button data-p="56999000">2 TB</button></div>
+<div class="group">
+<div class="row"><label for="gaji">Gaji / bulan</label><div class="in"><span>Rp</span><input id="gaji" inputmode="numeric" placeholder="5.000.000" autocomplete="off"></div></div>
+<div class="row"><label for="harga">Harga</label><div class="in"><span>Rp</span><input id="harga" inputmode="numeric" value="27.499.000" autocomplete="off"></div></div>
+</div>
+<p class="cap">Harga cuma perkiraan, boleh kamu ubah.</p>
+<button id="go">Hitung</button>
+<div id="res"><div id="emoji"></div><div id="msg"></div><div id="stat"></div>
+<button id="buyBtn" hidden>Gas beli</button>
+<div class="group" id="stores" hidden><a href="https://www.ibox.co.id" target="_blank" rel="noopener noreferrer">Beli di iBox</a><a href="https://www.digimap.co.id" target="_blank" rel="noopener noreferrer">Beli di Digimap</a><a href="https://hellostore.id" target="_blank" rel="noopener noreferrer">Beli di hello</a></div></div>
+<p class="foot">@ahasanhariri</p>
+</div>
+<script>
+var JT=1e6,M=1e9,T=1e12;
+var tiers=[
+[0,1*JT,"😭",["Maaf, gajimu bahkan belum sampai Rp1 juta. Ini bukan miskin lagi, ini level bertahan hidup. Coba tanya pemerintah, mana 19 juta lapangan pekerjaan itu?", "Gaji segini mau beli iPhone 18 Pro? Beli casingnya aja lu harus nabung sampai lebaran.", "Saldo lu itu bukan buat ditabung, tapi buat dikenang. Mimpi boleh, checkout jangan dulu.", "Dompet lu lebih kosong dari janji kampanye. Beli gorengan dulu, iPhone-nya urusan reinkarnasi.", "Jarak lu ke iPhone 18 Pro lebih jauh daripada jarak lu ke bulan.", "Gaji lu belum sampai Rp1 juta. Coba tanya Wapres Gibran, mana 19 juta lapangan pekerjaan itu?", "Gaji segini, iPhone 18 Pro cuma mimpi. Daripada ngeluh di sini, tanya langsung ke Wapres Gibran soal janji 19 juta lapangan kerja itu."]],
+[1*JT,3*JT,"😢",["Maaf, kamu masih miskin. Coba tanya pemerintah, mana 19 juta lapangan pekerjaan itu?", "Miskin itu bukan aib, tapi ngarep iPhone 18 Pro dengan gaji segini itu halu level dewa.", "Gaji lu habis sebelum tanggal tua. iPhone 18 Pro cuma bisa lu lihat di Instagram orang.", "Lu harus nabung penuh bertahun-tahun, tanpa makan, tanpa kos, tanpa napas. Selamat berjuang.", "Kata motivator: berani bermimpi. Kata saldo lu: berani bohong.", "Upgrade skill dulu, bukan upgrade iPhone. HP lu yang layarnya retak itu masih bisa dipakai kok.", "Kamu masih miskin. Coba DM Wapres Gibran, tanyain mana 19 juta lapangan pekerjaan itu?", "Mau iPhone 18 Pro tapi gaji segini? Sana tanya Pak Wapres Gibran, janji 19 juta lapangan kerja itu yang mana ya?"]],
+[3*JT,5*JT,"😅",["Yah, kamu masih UMR Jakarta. Coba resign dan cari kerjaan yang bikin naik gaji.", "Gaji UMR tapi gaya flagship. Cicilan 0% itu bukan penyelamat, itu jebakan batman.", "Bos bilang gaji sesuai kontribusi. Berarti kontribusi lu sebanding sama casing iPhone-nya doang.", "Bisa kebeli kok, asal siap makan mie instan tiga tahun berturut-turut. Worth it? Pikir lagi.", "Naik gaji nggak datang dari doa doang. Update CV lu sana, yang terakhir diupdate zaman kuliah itu.", "Masih UMR Jakarta. Cari kerjaan yang gajinya naik, atau tanya Wapres Gibran soal janji 19 juta lapangan pekerjaan itu.", "Gaji UMR tapi gaya flagship. Sambil nabung, coba tanyakan ke Wapres Gibran, lapangan kerja yang 19 juta itu di mana ya?"]],
+[5*JT,7*JT,"🙂",["Lumayan lah, tapi masih kurang.", "Dikit lagi sultan. Dikit banget... dikalikan tiga.", "Gaji lu udah lumayan, tapi iPhone 18 Pro bilang: belum, bro, belum.", "Setengah jalan. Sisanya jalan kaki sambil nabung."]],
+[7*JT,10*JT,"😎",["Mantap! Gajimu sudah lumayan. Nabung dikit lagi, atau cicil 12 bulan tanpa drama, iPhone 18 Pro bisa jadi milikmu.", "Wih, gaji lu mulai berkilau! Dikit lagi iPhone 18 Pro mendarat di genggaman, tinggal tahan godaan checkout yang lain.", "Level lu sudah naik kelas! Tuhan, Apple, dan bank sepakat: lu layak punya iPhone 18 Pro.", "Gaji segini tandanya semesta mulai berpihak. Cicil sedikit, gaya selangit!"]],
+[10*JT,20*JT,"🤩",["Gaji double digit! Tinggal sisihkan beberapa bulan, atau pakai cicilan 0% dan kamu sudah bisa pamer unboxing.", "Double digit, bro! Kulkas, dompet, dan harga diri lu bersinar bareng. iPhone 18 Pro tinggal tunggu giliran.", "Gaji lu bikin ATM tersenyum. Beli iPhone 18 Pro itu bukan mimpi, tapi agenda bulan depan.", "Luar biasa! Lu bukan lagi pengagum iPhone, lu calon pemiliknya. Sebentar lagi unboxing viral!"]],
+[20*JT,50*JT,"💸",["Sekali gajian langsung bisa checkout iPhone 18 Pro, sisanya masih bisa buat beli casing dan makan enak.", "Satu kali gajian, satu iPhone 18 Pro, sisanya buat traktir temen. Lu emang pantas dipuja!", "Gaji lu bikin kasir toko iPhone berdiri hormat. Checkout aja, nggak usah mikir dua kali!", "Sultan muda terdeteksi! Dompet lu setebal brosur promo, dan iPhone 18 Pro cuma pemanasan."]],
+[50*JT,200*JT,"🤑",["Satu iPhone 18 Pro? Kamu bisa beli beberapa sekaligus, satu buat tiap hari kerja.", "Gaji lu gila-gilaan! Beli iPhone 18 Pro buat lu itu kayak beli permen di kasir.", "Lu bukan lagi konsumen, lu investor mood Apple. Beli lima pun saldo lu masih ketawa.", "Pelayan toko bakal panggil lu 'Kak' sambil nunduk 90 derajat. Gaji lu legendaris!"]],
+[200*JT,1*M,"🛥️",["Gaji segini, iPhone 18 Pro cuma receh. Warna apa yang kamu mau? Beli semua juga bisa.", "Gaji lu bikin iPhone 18 Pro kelihatan murah. Sekalian beli semua warna, semua kapasitas, lalu bagi-bagi ke tetangga.", "Lu sultan sejati! Orang lain nabung, lu tinggal swipe. Dunia memang indah buat lu.", "Gaji lu setara tsunami rezeki. iPhone 18 Pro? Itu cuma uang parkir lu bulan ini."]],
+[1*M,T,"🏝️",["Sultan terdeteksi. Kamu tinggal borong satu toko iPhone, atau beli sekalian pabriknya.", "Gaji lu miliaran! iPhone 18 Pro cuma kembalian, mending borong satu mal sekalian.", "Tuan Besar telah tiba! Apple Store bakal gelar karpet merah dan tepuk tangan buat lu.", "Lu bukan beli iPhone, lu cuma nyicipin. Gaji segini bikin Forbes sibuk ngetik nama lu."]],
+[T,Infinity,"🚀",["Gajimu triliunan. Apple sebaiknya nanya, kamu mau beli perusahaannya sekalian?", "Gaji triliunan! Lu nggak beli iPhone 18 Pro, lu yang menentukan harganya.", "Dewa rezeki hadir! Bumi berhenti berputar sebentar buat menyaksikan saldo lu.", "John Ternus nelpon lu langsung, minta saran strategi. Gaji lu kelas semesta!"]]
+];
+function num(s){return parseInt(String(s).replace(/\D/g,""),10)||0}
+function fmt(n){return n.toLocaleString("id-ID")}
+["gaji","harga"].forEach(function(id){
+var el=document.getElementById(id);
+el.addEventListener("input",function(){var n=num(el.value);el.value=n?fmt(n):""});
+});
+document.getElementById("seg").addEventListener("click",function(e){
+var b=e.target.closest("button");if(!b)return;
+document.querySelectorAll("#seg button").forEach(function(x){x.classList.remove("on")});
+b.classList.add("on");document.getElementById("harga").value=fmt(+b.dataset.p);
+});
+document.getElementById("harga").addEventListener("input",function(){
+document.querySelectorAll("#seg button").forEach(function(x){x.classList.remove("on")});
+});
+function hitung(){
+var g=num(document.getElementById("gaji").value),h=num(document.getElementById("harga").value)||27499000;
+var r=document.getElementById("res");
+if(!g){r.style.display="block";document.getElementById("emoji").textContent="🤔";document.getElementById("msg").textContent="Isi dulu gajinya, nanti dihitung.";document.getElementById("stat").textContent="";document.getElementById("buyBtn").hidden=true;document.getElementById("stores").hidden=true;return}
+var t=tiers.find(function(x){return g>=x[0]&&g<x[1]})||tiers[tiers.length-1];
+document.getElementById("emoji").textContent=t[2];
+var m=t[3];
+if(Array.isArray(m)){var k=t[0],n,last=window._last||{};do{n=Math.floor(Math.random()*m.length)}while(m.length>1&&n===last[k]);last[k]=n;window._last=last;m=m[n]}
+document.getElementById("msg").textContent=m;
+var b=h/g,txt;
+if(b<=1)txt="Harga iPhone = "+Math.round(b*100)+"% dari gaji sebulan";
+else if(b<24)txt="Butuh sekitar "+b.toFixed(1).replace(".",",")+" bulan gaji penuh (tanpa makan, tanpa kos)";
+else txt="Butuh sekitar "+(b/12).toFixed(1).replace(".",",")+" tahun gaji penuh (tanpa makan, tanpa kos)";
+document.getElementById("stat").textContent=txt;
+var ok=g>=7*JT;
+document.getElementById("buyBtn").hidden=!ok;
+document.getElementById("stores").hidden=true;
+r.style.display="block";
+}
+document.getElementById("buyBtn").addEventListener("click",function(){var st=document.getElementById("stores");st.hidden=!st.hidden});
+document.getElementById("go").addEventListener("click",hitung);
+document.getElementById("gaji").addEventListener("keydown",function(e){if(e.key==="Enter")hitung()});
+</script>
+</body>
+</html>
